@@ -1,0 +1,9 @@
+import './index.css'
+
+const Contato = () => {
+  return (
+    <h1>CONTATO</h1>
+  )
+}
+
+export default Contato

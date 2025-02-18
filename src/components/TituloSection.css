@@ -1,0 +1,17 @@
+.titulo-section {
+    display: inline-block;
+    font-size: 5rem;
+    color: #00C853;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.titulo-section::after {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background-color: #00C853;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

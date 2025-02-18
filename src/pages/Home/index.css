@@ -1,0 +1,72 @@
+.tecnologias {
+    width: 100%;
+    padding: 6rem 0;   
+    background-color: #000; 
+}
+
+.titulo-section {
+    font-size: 5rem;
+    color: #00C853;
+    margin-bottom: 4rem;
+}
+
+.swiper {
+    cursor: grab;
+}
+
+.box-tecnologia {
+    width: 250px;
+    height: 300px;
+    padding: 20px; 
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    gap: 2rem;  
+    margin: 2rem 0 2rem 1rem;  
+    background: linear-gradient(to right, #111 0%, #ffffff1c 50%, #111 100%);
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 200, 83, 0.05);
+    box-shadow: -6px 6px 20px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s;
+}
+
+.box-tecnologia:hover {
+    transform: scale(1.1);
+}
+
+.box-tecnologia > svg {
+    width: 10rem;
+    height: 10rem;
+    fill: #00c853;
+    transition: 0.3s;
+}
+
+.box-tecnologia > p {
+    color: #ccc;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+ }
+
+ .box-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+ }
+
+.prev,
+.next {     
+    cursor: pointer;
+}
+
+.prev > svg,
+.next > svg {   
+    width: 4rem;
+    height: 4rem;
+    color: #00C853;
+    cursor: pointer;
+}
