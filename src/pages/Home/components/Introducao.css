@@ -1,0 +1,50 @@
+.introducao-content {
+    padding: 6rem 0; 
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;   
+}
+
+.cargo > p {
+    color: #00C853;
+    font-size: 8rem;
+    line-height: 8rem;
+    letter-spacing: 0.5rem;
+}
+
+
+.introducao-content > p {
+    color: #424242;
+    font-size: 2.5rem;
+    max-width: 50%;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 2rem;
+}
+
+.redes-sociais > a {
+    width: 5rem;
+    height: 5rem;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.redes-sociais > a:hover {
+    transform: scale(1.1);
+    background-color: #888;
+}
+
+.redes-sociais > a > svg {
+    width: 60%;
+    height: 60%;
+    color: #000;
+}
