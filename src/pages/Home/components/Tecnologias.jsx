@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaGithub } from "react-icons/fa";
@@ -7,11 +7,12 @@ import { IoIosGitBranch, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } f
 import TituloSection from '../../../components/TituloSection'
 import "swiper/css";
 import "swiper/css/navigation";
-import './Tecnologias.css'
+import './Tecnologias.css';
 
 const Tecnologias = () => {
-    const [isBeginning, setIsBeginning] = useState(true)
-    const [isEnd, setIsEnd] = useState(false)
+    const [qntdSlides, setQntdSlides] = useState(4);
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
     const tecnologias = [
         {
             id: 1,
@@ -48,7 +49,23 @@ const Tecnologias = () => {
             icone: <FaGithub />,
             desc: "GitHub"
         },
-    ]
+    ];
+
+    useEffect(() => {
+        const handleSize = () => {
+            if(window.innerWidth <= 480) {
+                setQntdSlides(1)
+                console.log(window.innerWidth)
+            }
+            else {
+                setQntdSlides(4)
+            }
+        };
+
+        window.addEventListener('resize', handleSize);
+
+        return () => window.removeEventListener('resize', handleSize);
+    }, [])
 
     return (
         <section className='tecnologias'>
@@ -56,8 +73,8 @@ const Tecnologias = () => {
                 <TituloSection titulo="TECNOLOGIAS" />
                 <Swiper
                     modules={[Navigation, Autoplay]}
-                    slidesPerView={4}
-                    spaceBetween={0}
+                    slidesPerView={qntdSlides}
+                    spaceBetween={50}
                     autoplay
                     navigation={{
                         nextEl: '.next',

@@ -9,13 +9,11 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollAtual((prevScroll) => {
-        if(prevScroll > window.scrollY) {
-          setStatusHeader('header-visivel')
-          console.log("Subiu")
+        if(prevScroll > window.scrollY || window.scrollY <= 0) {
+          setStatusHeader('header-visivel')          
         }
         else {
           setStatusHeader('header-oculto')
-          console.log("Desceu")
         }
 
         return window.scrollY;
@@ -45,6 +43,11 @@ const Header = () => {
                 <Link to="contato" className="nav-item">Contato</Link>
               </li>
             </ul>
+            <div className="btn-hamburguer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </nav>
         </div>
       </header>    

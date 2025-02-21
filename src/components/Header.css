@@ -4,7 +4,7 @@
     height: 8rem; 
     background-color: #000;  
     z-index: 999; 
-    transition: transform 0.2s;   
+    transition: opacity 0.4s;   
 }
 
 .logo > h1,
@@ -73,9 +73,42 @@
 }
 
 .header-visivel {
-    transform: translateY(0%);
+    opacity: 1;
 }
 
 .header-oculto {
-    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.btn-hamburguer {
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;  
+}
+
+.btn-hamburguer > span {
+    width: 2.5rem;
+    height: 0.4rem;
+    background-color: #00C853;
+    border-radius: 2rem; 
+}
+
+@media (max-width: 480px) {
+    .btn-hamburguer {
+        display: flex;    
+    }
+
+    .logo > h1 {
+        font-size: 2.5rem;
+    }
+
+    .lista-navegacao {
+        display: none;
+    }
+
+    .navegacao {
+        display: flex;
+    }
 }

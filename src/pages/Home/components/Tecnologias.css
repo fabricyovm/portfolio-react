@@ -1,15 +1,8 @@
-
 .tecnologias {
     width: 100%;
-    padding: 6rem 0;   
-     
-    user-select: none;
-}
+    padding: 6rem 0;
 
-.titulo-section {
-    font-size: 5rem;
-    color: #00C853;
-    margin-bottom: 4rem;
+    user-select: none;
 }
 
 .swiper {
@@ -19,16 +12,16 @@
 .box-tecnologia {
     width: 250px;
     height: 300px;
-    padding: 20px; 
+    padding: 20px;
     font-size: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;  
-    gap: 2rem;  
-    margin: 2rem 0 2rem 1rem;  
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 2rem 1rem;
     background: linear-gradient(to right, #111 0%, #ffffff1c 50%, #111 100%);
-    border-radius: 1rem; 
+    border-radius: 1rem;
     transition: transform 0.4s;
 }
 
@@ -49,26 +42,63 @@
     color: #fff;
     font-size: 3rem;
     margin-top: 10px;
- }
+}
 
- .box-pagination {
+.box-pagination {
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
     padding-top: 1rem;
     position: relative;
- }
- 
+}
+
 .prev,
-.next {     
+.next {
     cursor: pointer;
     width: 4rem;
-    height: 4rem;    
+    height: 4rem;
     color: #00c853;
     cursor: pointer;
 }
 
 .seta-transparente {
     color: #00c8532a;
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .box-tecnologia {
+        width: 100%;
+        height: 300px;
+        padding: 20px;
+        margin: 2rem 0 2rem 0rem;
+    }
+
+    .box-tecnologia > svg {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .box-tecnologia > p {
+        font-size: 4rem;        
+    }
+
+    .box-tecnologia:hover {
+        transform: scale(1.0);
+    }
+
+    .box-pagination {
+        margin-top: 0rem;
+        position: relative;
+    }
+
+    .prev,
+    .next {
+        width: 6rem;
+        height: 6rem;
+    }
 }
