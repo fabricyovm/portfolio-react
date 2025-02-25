@@ -1,0 +1,17 @@
+.btn-padrao {
+    width: 200px;
+    font-size: 2rem;
+    border: 1px solid #00C853;
+    background-color: #00C853;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-padrao:hover {    
+    background-color: #000;
+    color: #00C853;
+}

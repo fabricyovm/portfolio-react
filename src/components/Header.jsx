@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { Link } from "react-router";
 import './Header.css';
 
 const Header = () => {
   const [scrollAtual, setScrollAtual] = useState(window.scrollY);
   const [statusHeader, setStatusHeader] = useState('header-visivel');
+  const [menuHamburguer, setMenuHamburguer] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,10 +21,20 @@ const Header = () => {
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);   
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const acaoMenu = () => {
+    if(menuHamburguer === '') {
+      setMenuHamburguer('ativado')
+    }
+    else {
+      setMenuHamburguer('')
+    }
+
+  }
 
   return (
       <header className={`header ${statusHeader}`}>
@@ -32,6 +43,11 @@ const Header = () => {
             <h1>fabricyo mattivi</h1>
           </Link>
           <nav className="navegacao">
+          <div className={`btn-hamburguer ${menuHamburguer}`} onClick={() => acaoMenu()}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <ul className="lista-navegacao">
               <li>
                 <Link to="/" className="nav-item">Home</Link>
@@ -43,11 +59,6 @@ const Header = () => {
                 <Link to="contato" className="nav-item">Contato</Link>
               </li>
             </ul>
-            <div className="btn-hamburguer">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </nav>
         </div>
       </header>    

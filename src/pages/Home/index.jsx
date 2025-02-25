@@ -1,5 +1,6 @@
 import Introducao from './components/Introducao';
 import Tecnologias from './components/Tecnologias';
+import ProjetoDestaque from './components/ProjetoDestaque';
 import './index.css'
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
   return (
     <>
       <Introducao />
-      <Tecnologias />     
+      <Tecnologias />   
+      <ProjetoDestaque />  
     </>
   )
 }

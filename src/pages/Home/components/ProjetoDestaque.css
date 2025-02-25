@@ -1,0 +1,44 @@
+.projeto-destaque {
+    padding: 4rem 0;
+    height: 100vh;
+}
+
+.projeto {
+    width: 100%;
+    display: flex;
+    margin-top: 4rem;
+    gap: 5rem;
+    transition: transform 0.2s;
+}
+
+.img-projeto,
+.desc-projeto {
+    flex: 1;
+}
+
+.img-projeto > img {
+    width: 100%;
+}
+
+.desc-projeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+.desc-projeto * {
+    color: #eee;
+}
+
+.titulo-projeto {
+    font-size: 3rem;
+} 
+
+.texto-descricao {
+    font-size: 1.8rem;
+}
+
+.box-botoes {
+    display: flex;
+    gap: 1rem;
+}

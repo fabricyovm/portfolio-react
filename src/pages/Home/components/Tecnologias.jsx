@@ -62,6 +62,8 @@ const Tecnologias = () => {
             }
         };
 
+        handleSize()
+
         window.addEventListener('resize', handleSize);
 
         return () => window.removeEventListener('resize', handleSize);
