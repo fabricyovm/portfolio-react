@@ -1,0 +1,119 @@
+.contato {
+    height: 100vh;
+    padding-top: 10rem;        
+}
+
+.container-contato {
+    display: flex;   
+}
+
+.formulario,
+.contato-alternativo {
+    flex: 1;
+}
+
+.contato-alternativo {
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   gap: 2rem; 
+   text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-contato,
+.textarea-mensagem {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    outline: 0;
+    background-color: #ccc;
+}
+
+.textarea-mensagem {
+    height: 15rem;
+}
+
+.input-contato:focus,
+.textarea-mensagem:focus {
+    border: 4px solid #00a00d;
+}
+
+.btn-enviar {
+    width: 20rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #00C853;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-enviar:hover,
+.btn-whatsapp-contato:hover {
+    transform: scale(1.05);
+}
+
+.texto-contato {
+    color: #00C853;
+    font-size: 2.5rem; 
+}
+
+.texto-contato > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #eee;
+}
+
+.btn-whatsapp-contato {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #eee;
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 3rem;
+    transition: transform 0.2s;
+}
+
+.btn-whatsapp-contato > svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+#ou {
+    font-size: 6rem;
+    color: #424242;
+}
+
+@media (max-width: 480px) {
+    .contato {
+        height: auto;
+        padding-top: 10rem;        
+    }
+
+    .container-contato {
+        flex-direction: column;
+        gap: 12rem;
+    }
+
+    .btn-enviar {
+        width: 100%;
+    }
+
+    .btn-whatsapp-contato {
+        width: 100%;
+    }
+}
