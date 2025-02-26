@@ -1,20 +1,19 @@
 .introducao {
-    width: 100%;
-    padding-top: 8rem;
-    min-height: calc(100vh - 8rem);
+    width: 100%;   
+    padding-top: 15rem; 
+    min-height: 100vh;
 }
 
 .introducao-content {
-    width: 100%;    
-    height: calc(100vh - 80px);
+    width: 100%;        
     display: flex;    
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 8rem;   
+    gap: 0rem;   
 }
 
 .introducao-descricao,
-.laptop {    
+.intro-tecnologias {    
     flex: 1;
 }
 
@@ -72,11 +71,9 @@
 }
 
 .intro-tecnologias {
-    display: grid; 
-    flex: 1;   
+    display: grid;   
     grid-template-columns: repeat(3, 100px);      
-    justify-content: center;
-    align-content: center;
+    justify-content: end;   
     gap: 2rem 0;
     height: 100%; 
     user-select: none; 
@@ -86,8 +83,6 @@
     display: block;
     width: 8rem;
     height: 8rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 2px 25px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
 }
 
 .intro-tecnologias > img:nth-child(7) {
@@ -103,13 +98,14 @@
 
 @media (max-width: 480px) {
     .introducao {
-        padding: 25rem 0 10rem 0;
+        margin-bottom: 8rem;
+        min-height: auto;
     }
 
     .introducao-content {
         flex-direction: column;
         align-items: center;
-        gap: 12rem;
+        gap: 8rem;
     }
 
     .introducao-texto {
@@ -119,6 +115,14 @@
     .cargo > p {        
         font-size: 5rem;
         line-height: 6rem;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .cargo > p {        
+        font-size: 4rem;
+        line-height: 5rem;
         letter-spacing: 0;
     }
 }
