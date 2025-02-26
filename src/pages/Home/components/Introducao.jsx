@@ -19,7 +19,7 @@ const Introducao = () => {
                                 (el) => {
                                     el.classList.add('cargo-texto')
                                 },
-                                1500,
+                                500,
                                 (el) => {
                                     setiniciarSegundaAnimacao(true)
                                     el.classList.remove('cargo-texto')

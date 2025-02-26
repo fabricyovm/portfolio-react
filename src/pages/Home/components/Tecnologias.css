@@ -1,7 +1,8 @@
 .tecnologias {
     width: 100%;
     padding: 4rem 0;
-    user-select: none;    
+    user-select: none;  
+    background-color: #000;
 }
 
 .swiper {

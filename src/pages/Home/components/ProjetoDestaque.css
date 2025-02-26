@@ -18,6 +18,7 @@
 
 .img-projeto > img {
     width: 100%;
+    border-radius: 1rem;
 }
 
 .desc-projeto {
@@ -32,6 +33,8 @@
 
 .titulo-projeto {
     font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ccc;
 } 
 
 .texto-descricao {
@@ -41,4 +44,34 @@
 .box-botoes {
     display: flex;
     gap: 1rem;
+}
+
+.img-destaque-mobile {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .projeto {
+        flex-direction: column;
+    }
+
+    .img-projeto {
+        width: 100%;
+    }
+
+    .img-destaque-mobile {
+        display: block;
+    }
+
+    .img-destaque-desktop {
+        display: none;
+    }
+
+    .desc-projeto {
+        gap: 5rem;
+    }
+
+    .titulo-projeto {
+        font-size: 2.5rem;
+    }
 }
