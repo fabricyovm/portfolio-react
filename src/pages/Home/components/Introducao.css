@@ -1,6 +1,6 @@
 .introducao {
     width: 100%;   
-    padding-top: 15rem; 
+    padding-top: 12rem; 
     min-height: 100vh;
 }
 
@@ -9,7 +9,11 @@
     display: flex;    
     justify-content: space-between;
     align-items: center;
-    gap: 0rem;   
+    gap: 0rem;  
+    padding: 8rem 5rem;
+    border-radius: 2rem;
+    background: linear-gradient(to right, #080808, #222, #080808); 
+    margin-bottom: 2rem;
 }
 
 .introducao-descricao,
