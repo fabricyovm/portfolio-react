@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: "Coda", serif;  
+    font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -11,8 +11,9 @@ html {
 }
 
 body {
-    background-color: #f1f1f1;  
-}
+    background: linear-gradient(to right, #D0D0D0, #F1F1F1);
+}  
+  
 
 a {
     text-decoration: none;

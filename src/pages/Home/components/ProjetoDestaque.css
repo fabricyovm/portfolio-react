@@ -28,13 +28,13 @@
 }
 
 .desc-projeto * {
-    color: #eee;
+    color: #222;
 }
 
 .titulo-projeto {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: #ccc;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
 } 
 
 .texto-descricao {

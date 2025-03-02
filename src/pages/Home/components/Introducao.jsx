@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
-import ReactIcone from '../img/react.svg'
-import JavascriptIcone from '../img/javascript.svg'
-import HTMLIcone from '../img/html.svg'
-import CSSIcone from '../img/css.svg'
-import JavaIcone from '../img/java.svg'
-import GitIcone from '../img/git.svg'
-import GithubIcone from '../img/github.svg'
+import DeveloperImg from '../img/developer-img.png'
 import './introducao.css';
 
 const Introducao = () => {
@@ -57,14 +51,8 @@ const Introducao = () => {
                         </a>
                     </div>
                 </div>
-                <div className="intro-tecnologias">
-                    <img src={ReactIcone} alt="React" />
-                    <img src={JavascriptIcone} alt="React" />
-                    <img src={HTMLIcone} alt="React" />
-                    <img src={CSSIcone} alt="React" />
-                    <img src={JavaIcone} alt="React" />
-                    <img src={GitIcone} alt="React" />
-                    <img src={GithubIcone} alt="React" />
+                <div className="intro-img">
+                    <img src={DeveloperImg} classList="intro-img" />
                 </div>
             </div>
         </section>
