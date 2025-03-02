@@ -23,7 +23,7 @@
 }
 
 .cargo > p {
-    color: #00C853;
+    color: var(--cor-titulo);
     font-size: 8rem;
     line-height: 8rem;
     letter-spacing: 0.5rem;
@@ -61,13 +61,13 @@
 
 .redes-sociais > a:hover {
     transform: scale(1.1);
-    background-color: #ccc;
+    background-color: #222;
 }
 
 .redes-sociais > a > svg {
     width: 60%;
     height: 60%;
-    color: #000;
+    color: #f1f1f1;
 }
 
 .intro-tecnologias {

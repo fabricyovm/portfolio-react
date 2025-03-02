@@ -2,7 +2,6 @@
     width: 100%;
     padding: 4rem 0;
     user-select: none;  
-    background-color: #000;
 }
 
 .swiper {
@@ -31,7 +30,7 @@
     transform: scale(1.05);
 }
 
-.box-tecnologia > svg {
+.box-tecnologia > img {
     width: 10rem;
     height: 10rem;
     fill: #00c853;

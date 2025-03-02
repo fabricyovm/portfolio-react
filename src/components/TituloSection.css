@@ -1,7 +1,7 @@
 .titulo-section {
     display: inline-block;
     font-size: 5rem;
-    color: #00C853;
+    color: var(--cor-titulo);
     margin-bottom: 4rem;
     position: relative;
 }
@@ -10,7 +10,7 @@
     content: '';
     width: 50%;
     height: 4px;
-    background-color: #00C853;
+    background-color: var(--cor-titulo);
     position: absolute;
     left: 0;
     bottom: 0;
