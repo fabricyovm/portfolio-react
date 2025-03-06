@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
+import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaGithub } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { IoIosGitBranch, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 import TituloSection from '../../../components/TituloSection'
 import ReactIcone from '../img/react.svg'
 import JavascriptIcone from '../img/javascript.svg'
@@ -10,7 +12,6 @@ import CSSIcone from '../img/css.svg'
 import JavaIcone from '../img/java.svg'
 import GitIcone from '../img/git.svg'
 import GithubIcone from '../img/github.svg'
-import ViteImg from '../img/vite.svg'
 import "swiper/css";
 import "swiper/css/navigation";
 import './Tecnologias.css';
@@ -27,36 +28,31 @@ const Tecnologias = () => {
         },
         {
             id: 2,
-            icone: ViteImg,
-            desc: "Vite"
-        },
-        {
-            id: 3,
             icone: HTMLIcone,
             desc: "HTML"
         },
         {
-            id: 4,
+            id: 3,
             icone: CSSIcone,
             desc: "CSS"
         },
         {
-            id: 5,
+            id: 4,
             icone: JavascriptIcone,
             desc: "JavaScript"
         },
         {
-            id: 6,
+            id: 5,
             icone: JavaIcone,
             desc: "Java"
         },
         {
-            id: 7,
+            id: 6,
             icone: GitIcone,
             desc: "Git"
         },
         {
-            id: 8,
+            id: 7,
             icone: GithubIcone,
             desc: "GitHub"
         },
@@ -115,7 +111,7 @@ const Tecnologias = () => {
                                 <img src={elemento.icone} />
                                 <p>{elemento.desc}</p>
                             </div>
-                        </SwiperSlide>                        
+                        </SwiperSlide>
                     ))}
                 </Swiper>
                 <div className="box-pagination">
