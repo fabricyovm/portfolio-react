@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaGithub } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { IoIosGitBranch, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 import TituloSection from '../../../components/TituloSection'
 import ReactIcone from '../img/react.svg'
 import JavascriptIcone from '../img/javascript.svg'
@@ -12,6 +10,7 @@ import CSSIcone from '../img/css.svg'
 import JavaIcone from '../img/java.svg'
 import GitIcone from '../img/git.svg'
 import GithubIcone from '../img/github.svg'
+import ViteImg from '../img/vite.svg'
 import "swiper/css";
 import "swiper/css/navigation";
 import './Tecnologias.css';
@@ -28,31 +27,36 @@ const Tecnologias = () => {
         },
         {
             id: 2,
+            icone: ViteImg,
+            desc: "Vite"
+        },
+        {
+            id: 3,
             icone: HTMLIcone,
             desc: "HTML"
         },
         {
-            id: 3,
+            id: 4,
             icone: CSSIcone,
             desc: "CSS"
         },
         {
-            id: 4,
+            id: 5,
             icone: JavascriptIcone,
             desc: "JavaScript"
         },
         {
-            id: 5,
+            id: 6,
             icone: JavaIcone,
             desc: "Java"
         },
         {
-            id: 6,
+            id: 7,
             icone: GitIcone,
             desc: "Git"
         },
         {
-            id: 7,
+            id: 8,
             icone: GithubIcone,
             desc: "GitHub"
         },
