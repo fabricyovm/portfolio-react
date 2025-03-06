@@ -1,6 +1,5 @@
 .contato {
-    height: 100vh;
-    padding-top: 10rem;        
+    padding: 10rem 0;        
 }
 
 .container-contato {
@@ -29,10 +28,11 @@
 .input-contato,
 .textarea-mensagem {
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;  
+    border: 2px solid transparent;  
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 2rem;
-    outline: 0;
-    background-color: #ccc;
+    outline: 0;  
 }
 
 .textarea-mensagem {
@@ -41,7 +41,7 @@
 
 .input-contato:focus,
 .textarea-mensagem:focus {
-    border: 4px solid #00a00d;
+    border: 2px solid #222;  
 }
 
 .btn-enviar {
@@ -49,7 +49,7 @@
     border: none;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #00C853;
+    background-color: #222;
     color: #fff;
     font-size: 3rem;
     cursor: pointer;
@@ -61,8 +61,20 @@
     transform: scale(1.05);
 }
 
+.btn-enviar.loading {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #888; 
+    border-right: 4px solid #888; 
+    border-bottom: 4px solid #888;
+    background-color: transparent;
+    animation: loading 1s linear infinite;
+}
+
 .texto-contato {
-    color: #00C853;
+    color: #222;
     font-size: 2.5rem; 
 }
 
@@ -71,7 +83,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    color: #eee;
+    color: #222;
+    font-weight: bold;
 }
 
 .btn-whatsapp-contato {
@@ -96,6 +109,15 @@
 #ou {
     font-size: 6rem;
     color: #424242;
+}
+
+@keyframes loading {
+    to{
+        transform: rotate(0deg)
+    }
+    from {
+        transform: rotate(-360deg);
+    }
 }
 
 @media (max-width: 480px) {

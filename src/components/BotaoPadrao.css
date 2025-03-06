@@ -1,8 +1,8 @@
 .btn-padrao {
     width: 200px;
     font-size: 2rem;
-    border: 1px solid #00C853;
-    background-color: #00C853;
+    border: 1px solid #222;
+    background-color: #222;
     border-radius: 2rem;
     padding: 1rem;
     color: #fff;
@@ -16,11 +16,16 @@
 }
 
 .btn-padrao:hover {    
-    background-color: #000;
-    color: #00C853;
+    background-color: transparent;
+    color: #222;
 }
 
 .btn-padrao > svg {
     width: 2.5rem;
     height: 2.5rem;
+    fill: #eee;
+}
+
+.btn-padrao:hover > svg {    
+    fill: #222;
 }

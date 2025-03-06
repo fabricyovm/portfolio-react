@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaGithub } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { IoIosGitBranch, IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 import TituloSection from '../../../components/TituloSection'
+import ReactIcone from '../img/react.svg'
+import JavascriptIcone from '../img/javascript.svg'
+import HTMLIcone from '../img/html.svg'
+import CSSIcone from '../img/css.svg'
+import JavaIcone from '../img/java.svg'
+import GitIcone from '../img/git.svg'
+import GithubIcone from '../img/github.svg'
+import ViteImg from '../img/vite.svg'
 import "swiper/css";
 import "swiper/css/navigation";
 import './Tecnologias.css';
@@ -16,37 +22,42 @@ const Tecnologias = () => {
     const tecnologias = [
         {
             id: 1,
-            icone: <FaReact />,
+            icone: ReactIcone,
             desc: "React"
         },
         {
             id: 2,
-            icone: <FaHtml5 />,
-            desc: "HTML"
+            icone: ViteImg,
+            desc: "Vite"
         },
         {
             id: 3,
-            icone: <FaCss3Alt />,
-            desc: "CSS"
+            icone: HTMLIcone,
+            desc: "HTML"
         },
         {
             id: 4,
-            icone: <IoLogoJavascript />,
-            desc: "JavaScript"
+            icone: CSSIcone,
+            desc: "CSS"
         },
         {
             id: 5,
-            icone: <FaJava />,
-            desc: "Java"
+            icone: JavascriptIcone,
+            desc: "JavaScript"
         },
         {
             id: 6,
-            icone: <IoIosGitBranch />,
-            desc: "Git"
+            icone: JavaIcone,
+            desc: "Java"
         },
         {
             id: 7,
-            icone: <FaGithub />,
+            icone: GitIcone,
+            desc: "Git"
+        },
+        {
+            id: 8,
+            icone: GithubIcone,
             desc: "GitHub"
         },
     ];
@@ -101,10 +112,10 @@ const Tecnologias = () => {
                     {tecnologias.map(elemento => (
                         <SwiperSlide key={elemento.id}>
                             <div className="box-tecnologia">
-                                {elemento.icone}
+                                <img src={elemento.icone} />
                                 <p>{elemento.desc}</p>
                             </div>
-                        </SwiperSlide>
+                        </SwiperSlide>                        
                     ))}
                 </Swiper>
                 <div className="box-pagination">

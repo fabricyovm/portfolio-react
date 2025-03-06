@@ -2,14 +2,14 @@
     position: fixed;
     width: 100%;
     height: 8rem; 
-    background-color: #000;  
+    background: linear-gradient(to right, #D0D0D0, #F1F1F1);  
     z-index: 999; 
-    transition: opacity 0.4s;   
+    transition: opacity 0.4s;  
 }
 
 .logo > h1,
 .lista-navegacao * {
-    color: #00C853;
+    color: #222;
 }
 
 .logo {
@@ -32,7 +32,7 @@
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #00C853;    
+    border-bottom: 1px solid #222;  
 }
 
 .navegacao {
@@ -56,7 +56,7 @@
 
 .nav-item::after {
     content: '';
-    background-color: #00C853;
+    background-color: #222;
     width: 0%;
     height: 2px;
     position: absolute;

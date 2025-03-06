@@ -2,11 +2,10 @@
     width: 100%;
     padding: 4rem 0;
     user-select: none;  
-    background-color: #000;
 }
 
 .swiper {
-    cursor: grab;
+    cursor: grab;    
 }
 
 .box-tecnologia {
@@ -20,27 +19,25 @@
     align-items: center;
     gap: 2rem;
     margin: 2rem 0 2rem 1rem;
-    background: linear-gradient(to right, #111 0%, #ffffff1c 50%, #111 100%);
-    border-radius: 1rem;
+    border-radius: 0rem;
+    border: 2px solid #222;
     transition: transform 0.4s;
 }
 
 .box-tecnologia:hover {
-    border: 1px solid #00c853;
-    box-shadow: 0 0 10px #00c853;
     transform: scale(1.05);
 }
 
-.box-tecnologia > svg {
+.box-tecnologia > img {
     width: 10rem;
     height: 10rem;
-    fill: #00c853;
     transition: 0.3s;
 }
 
 .box-tecnologia > p {
-    color: #fff;
+    color: #222;
     font-size: 3rem;
+    font-weight: bold;
     margin-top: 10px;
 }
 
@@ -58,12 +55,12 @@
     cursor: pointer;
     width: 4rem;
     height: 4rem;
-    color: #00c853;
+    color: #222;
     cursor: pointer;
 }
 
 .seta-transparente {
-    color: #00c8532a;
+    color: #0000002a;
 }
 
 @media (max-width: 480px) {
@@ -76,13 +73,6 @@
         height: 300px;
         padding: 20px;
         margin: 2rem 0 2rem 0rem;
-        border: 1px solid #00c853;
-        box-shadow: 0 0 10px #00c853;
-    }
-
-    .box-tecnologia > svg {
-        width: 12rem;
-        height: 12rem;
     }
 
     .box-tecnologia > p {
