@@ -37,38 +37,11 @@
 }
 
 .introducao-texto {
-    color: #888;
+    color: #424242;
     font-size: 2.5rem;    
     display: block;    
 }
 
-.redes-sociais {
-    display: flex;
-    gap: 2rem;
-}
-
-.redes-sociais > a {
-    width: 5rem;
-    height: 5rem;
-    background-color: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.4s;
-}
-
-.redes-sociais > a:hover {
-    transform: scale(1.1);
-    background-color: #222;
-}
-
-.redes-sociais > a > svg {
-    width: 60%;
-    height: 60%;
-    color: #f1f1f1;
-}
 
 .intro-img {
     display: flex;

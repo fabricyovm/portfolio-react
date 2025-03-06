@@ -25,3 +25,7 @@
     height: 2.5rem;
     fill: #eee;
 }
+
+.btn-padrao:hover > svg {    
+    fill: #222;
+}

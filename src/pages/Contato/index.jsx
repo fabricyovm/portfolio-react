@@ -1,22 +1,48 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 import TituloSection from '../../components/TituloSection';
 import { FaWhatsapp, FaRegEnvelope  } from "react-icons/fa";
+import emailjs from '@emailjs/browser'
 import './index.css';
 
 const Contato = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [mensagem, setMensagem] = useState('');
+  const [isLoading, setIsLoading] = useState(false)
   const whatsapp = 'http://wa.me/5551985546552';
 
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
     
     if(nome === '' || email === '' || mensagem === '') {
       alert("ERRO: Preencha todos os campos.")
       return;
     }
+
+    const templateParams = {
+      from_name: nome,
+      email: email,
+      message: mensagem,
+    }
+
+    try {
+      setIsLoading(true)
+      
+      const response = await emailjs.send('service_b9w9v0n', 'template_0qn9u1i', templateParams, 'aXZI1aNLEYXXIZOm0')
+
+      console.log('E-mail enviado: ' + response.status, response.text)
+      alert("E-mail enviado com sucesso!")
+
+      setNome('')
+      setEmail('')
+      setMensagem('')
+    } catch(err) {
+      console.error("ERRO: Falha ao enviar o e-mail: " + err)
+      alert("Ops... Falha ao enviar o e-mai. Tente novamente mais tarde ou entre em contato pelo WhatsApp.")
+    } finally {
+      setIsLoading(false)
+    } 
   }
 
   return (
@@ -34,7 +60,7 @@ const Contato = () => {
             />
 
             <input
-              type="text"
+              type="email"
               placeholder="Digite seu e-mail..."
               className="input-contato"
               value={email}
@@ -50,8 +76,9 @@ const Contato = () => {
 
             <input 
               type="submit" 
-              value="Enviar" 
-              className="btn-enviar" 
+              value={`${isLoading ? 'Aguarde...' : 'Enviar'}`} 
+              disabled={isLoading}
+              className={`${isLoading ? 'btn-enviar loading' : 'btn-enviar'}`} 
             />
           </form>
           <div className="contato-alternativo">

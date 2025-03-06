@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
+import RedesSociais from '../../../components/RedesSociais'
 import DeveloperImg from '../img/developer-img.png'
 import './introducao.css';
 
@@ -39,20 +39,10 @@ const Introducao = () => {
                             className="introducao-texto"                            
                         />
                     )}
-                    <div className="redes-sociais">
-                        <a href="https://github.com/fabricyovm" target="_blank" >
-                            <FaGithub />
-                        </a>
-                        <a href="https://www.linkedin.com/in/fabricyovm" target="_blank" >
-                            <FaLinkedinIn />
-                        </a>
-                        <a href="http://wa.me/5551985546552" target="_blank" >
-                            <FaWhatsapp />
-                        </a>
-                    </div>
+                    <RedesSociais isFooter={false} />
                 </div>
                 <div className="intro-img">
-                    <img src={DeveloperImg} classList="intro-img" />
+                    <img src={DeveloperImg} />
                 </div>
             </div>
         </section>
