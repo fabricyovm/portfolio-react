@@ -1,0 +1,18 @@
+.container-projetos {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.container-projetos.home-page {
+    padding: 8rem 0;
+}
+
+.container-projetos.projetos-page { 
+    padding: 12rem 0;
+}
+
+.container-projetos.projetos-page > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}

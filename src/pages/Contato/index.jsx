@@ -1,6 +1,8 @@
-import { use, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaWhatsapp, FaRegEnvelope } from "react-icons/fa";
 import TituloSection from '../../components/TituloSection';
-import { FaWhatsapp, FaRegEnvelope  } from "react-icons/fa";
 import emailjs from '@emailjs/browser'
 import './index.css';
 
@@ -11,11 +13,36 @@ const Contato = () => {
   const [isLoading, setIsLoading] = useState(false)
   const whatsapp = 'http://wa.me/5551985546552';
 
+  gsap.registerPlugin(ScrollTrigger)
+
+  useLayoutEffect(() => {
+    gsap.to('.contato', {
+      x: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.contato',
+      },
+    })
+
+    gsap.to('.contato-alternativo', {
+      x: 0,
+      opacity: 1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: '.contato-alternativo',
+      },
+    })
+
+    return () => {
+      gsap.killTweensOf('.contato')
+      gsap.killTweensOf('.contato-alternativo')
+    }
+  })
 
   const sendEmail = async (e) => {
     e.preventDefault()
-    
-    if(nome === '' || email === '' || mensagem === '') {
+
+    if (nome === '' || email === '' || mensagem === '') {
       alert("ERRO: Preencha todos os campos.")
       return;
     }
@@ -28,7 +55,7 @@ const Contato = () => {
 
     try {
       setIsLoading(true)
-      
+
       const response = await emailjs.send('service_b9w9v0n', 'template_0qn9u1i', templateParams, 'aXZI1aNLEYXXIZOm0')
 
       console.log('E-mail enviado: ' + response.status, response.text)
@@ -37,12 +64,12 @@ const Contato = () => {
       setNome('')
       setEmail('')
       setMensagem('')
-    } catch(err) {
+    } catch (err) {
       console.error("ERRO: Falha ao enviar o e-mail: " + err)
       alert("Ops... Falha ao enviar o e-mai. Tente novamente mais tarde ou entre em contato pelo WhatsApp.")
     } finally {
       setIsLoading(false)
-    } 
+    }
   }
 
   return (
@@ -74,11 +101,11 @@ const Contato = () => {
               onChange={(e) => setMensagem(e.target.value)}
             />
 
-            <input 
-              type="submit" 
-              value={`${isLoading ? 'Aguarde...' : 'Enviar'}`} 
+            <input
+              type="submit"
+              value={`${isLoading ? 'Aguarde...' : 'Enviar'}`}
               disabled={isLoading}
-              className={`${isLoading ? 'btn-enviar loading' : 'btn-enviar'}`} 
+              className={`${isLoading ? 'btn-enviar loading' : 'btn-enviar'}`}
             />
           </form>
           <div className="contato-alternativo">
@@ -90,7 +117,7 @@ const Contato = () => {
             <p id="ou">OU</p>
             <p className="texto-contato">
               Diretamente pelo e-mail
-              <span><FaRegEnvelope  />fabricyo98@hotmail.com</span>
+              <span><FaRegEnvelope />fabricyo98@hotmail.com</span>
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@
     width: 100%;   
     padding-top: 12rem; 
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .introducao-content {
@@ -14,6 +15,11 @@
 .introducao-descricao,
 .intro-img {    
     flex: 1;
+}
+
+.introducao-descricao {
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 .cargo,
@@ -45,10 +51,12 @@
 .intro-img {
     display: flex;
     justify-content: end;
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .intro-img > img {
-    width: 80%;
+    width: 40rem;
 }
 
 @keyframes cursor {
