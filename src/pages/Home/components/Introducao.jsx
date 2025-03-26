@@ -1,10 +1,10 @@
-import { useLayoutEffect, useState } from 'react';
-import { TypeAnimation } from 'react-type-animation';
+import { useLayoutEffect, useState } from 'react'
+import { TypeAnimation } from 'react-type-animation'
 import RedesSociais from '../../../components/RedesSociais'
 import DeveloperImg from '../img/developer-img.png'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import './Introducao.css';
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import './Introducao.css'
 
 const Introducao = () => {
     const [iniciarSegundaAnimacao, setiniciarSegundaAnimacao] = useState(false)
