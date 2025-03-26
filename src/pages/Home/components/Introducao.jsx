@@ -4,7 +4,7 @@ import RedesSociais from '../../../components/RedesSociais'
 import DeveloperImg from '../img/developer-img.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import './introducao.css';
+import './Introducao.css';
 
 const Introducao = () => {
     const [iniciarSegundaAnimacao, setiniciarSegundaAnimacao] = useState(false)

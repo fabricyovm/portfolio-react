@@ -66,7 +66,6 @@ const Tecnologias = () => {
         const handleSize = () => {
             if(window.innerWidth <= 480) {
                 setQntdSlides(1)
-                console.log(window.innerWidth)
             }
             else {
                 setQntdSlides(4)
