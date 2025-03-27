@@ -49,9 +49,10 @@
 }
 
 .nav-item {
-    display: block;
+    display: flex;
     padding-bottom: 0.2rem;
     position: relative;
+    flex-grow: 1;
 }
 
 .nav-item::after {

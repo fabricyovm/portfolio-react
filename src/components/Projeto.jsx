@@ -13,8 +13,8 @@ const Projeto = ({
   return (
     <div className="projeto">
       <div className="img-projeto">
-        <img className='img-destaque-desktop' src={imagemDesktop} alt="Imagem do projeto" />
-        <img className='img-destaque-mobile' src={imagemMobile} alt="Imagem do projeto" />
+        <img className='img-desktop' src={imagemDesktop} alt="Imagem do projeto" />
+        <img className='img-mobile' src={imagemMobile} alt="Imagem do projeto" />
       </div>
       <div className="desc-projeto">
         <div className="box-texto-descricao">
