@@ -8,7 +8,7 @@
 }
 
 .logo > h1,
-.lista-navegacao * {
+.nav-item {
     color: #222;
 }
 
@@ -88,7 +88,7 @@
 .btn-hamburguer > span {
     width: 2.5rem;
     height: 0.4rem;
-    background-color: #00C853;
+    background-color: #222;
     border-radius: 2rem; 
     transition: transform 0.2s;
 }
@@ -103,6 +103,18 @@
 
 .btn-hamburguer.ativado > span:nth-child(3) {
     transform: rotate(-45deg) translateY(-6px);;
+}
+
+.icone-menu-mobile {
+    display: none;
+    fill: #eee;
+    color: #eee;
+    width: 3rem;
+    height: 3rem;
+}
+
+.text-menu-mobile {
+    display: none;
 }
 
 @media (max-width: 480px) {
@@ -123,13 +135,48 @@
     }
 
     .lista-navegacao {
-        display: none;
+        display: block;
         position: fixed;
-        top: 0;
+        bottom: 0;
         right: 0;
-        width: 50%;
-        height: 100%;
-        background-color: #000;   
-        padding-left: 8rem;     
+        width: 100%;
+        height: calc(100% - 7.9rem);
+        padding: 2rem;
+        background-color: #222;   
+        z-index: 999; 
+        transform: translateX(110%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .lista-navegacao > li:not(:first-child) {
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1rem;
+    }
+
+    .lista-navegacao > li:first-child {
+        border-bottom: none;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .text-menu-mobile {
+        display: block;
+        color: #eee;
+        font-size: 3rem;        
+    }
+
+    .btn-hamburguer.ativado + .lista-navegacao {
+        transform: translateX(0);
+    }
+
+    .nav-item {
+        color: #eee;
+    }
+
+    .icone-menu-mobile {
+        display: block;
     }
 }

@@ -70,7 +70,7 @@ const Tecnologias = () => {
             else {
                 setQntdSlides(4)
             }
-        };
+        }
 
         handleSize()
 

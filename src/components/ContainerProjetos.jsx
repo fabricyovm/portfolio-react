@@ -13,7 +13,6 @@ const ContainerProjetos = ({ children, variant = "home-page" }) => {
       scrollTrigger: {
         trigger: '.container-projetos',
         start: 'top: 300px', 
-        toggleActions: 'play reverse play reverse',       
       },
     })
 

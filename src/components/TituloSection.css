@@ -17,7 +17,7 @@
     bottom: 0;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
     .titulo-section {
         font-size: 4.5rem;
     }

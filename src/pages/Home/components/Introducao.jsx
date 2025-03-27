@@ -16,8 +16,7 @@ const Introducao = () => {
             x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: '.intro-img', 
-                toggleActions: 'play reverse play reverse',             
+                trigger: '.intro-img',             
             },
         })
 
@@ -25,8 +24,7 @@ const Introducao = () => {
             x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: '.introducao-descricao', 
-                toggleActions: 'play reverse play reverse',             
+                trigger: '.introducao-descricao',              
             },
         })
 

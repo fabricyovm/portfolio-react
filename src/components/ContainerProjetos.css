@@ -1,6 +1,7 @@
 .container-projetos {
     opacity: 0;
     transform: translateX(-100%);
+    min-height: 100dvh;
 }
 
 .container-projetos.home-page {
