@@ -34,13 +34,6 @@
     letter-spacing: 0.5rem;
 }
 
-.cargo-texto::after {
-    content: '|';
-    animation: cursor 1.1s infinite step-start;
-    animation-delay: 1.5s;
-    color: #888;
-}
-
 .introducao-texto {
     color: #424242;
     font-size: 2.5rem;    

@@ -11,12 +11,12 @@ const Introducao = () => {
 
     gsap.registerPlugin(ScrollTrigger)
 
-    useLayoutEffect(() => {        
+    useLayoutEffect(() => {
         gsap.to('.intro-img', {
             x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: '.intro-img',             
+                trigger: '.intro-img',
             },
         })
 
@@ -24,7 +24,7 @@ const Introducao = () => {
             x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: '.introducao-descricao',              
+                trigger: '.introducao-descricao',
             },
         })
 
@@ -39,33 +39,13 @@ const Introducao = () => {
             <div className="container introducao-content">
                 <div className="introducao-descricao">
                     <div className='cargo'>
-                        <TypeAnimation
-                            cursor={false}
-                            sequence={[
-                                'Desenvolvedor\nFront-end',
-                                (el) => {
-                                    el.classList.add('cargo-texto')
-                                },
-                                500,
-                                (el) => {
-                                    setiniciarSegundaAnimacao(true)
-                                    el.classList.remove('cargo-texto')
-                                }
-                            ]}
-                            wrapper="p"
-                            speed={150}
-                            className="cargo-texto"
-                        />
+                        <p className="cargo-texto">
+                            Desenvolvedor<br />Front-End
+                        </p>
                     </div>
-                    {iniciarSegundaAnimacao && (
-                        <TypeAnimation
-                            cursor={true}
-                            sequence={['Olá, eu sou Fabricyo Vargas Mattivi e estou em busca da minha primeira oportunidade profissional como desenvolvedor.']}
-                            wrapper="p"
-                            speed={120}
-                            className="introducao-texto"
-                        />
-                    )}
+                    <p className="introducao-texto">
+                        Olá, eu sou Fabricyo Vargas Mattivi e estou em busca da minha primeira oportunidade profissional como desenvolvedor.
+                    </p>
                     <RedesSociais isFooter={false} />
                 </div>
                 <div className="intro-img">

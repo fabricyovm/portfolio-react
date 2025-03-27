@@ -16,9 +16,9 @@ import "swiper/css/navigation";
 import './Tecnologias.css';
 
 const Tecnologias = () => {
-    const [qntdSlides, setQntdSlides] = useState(4);
-    const [isBeginning, setIsBeginning] = useState(true);
-    const [isEnd, setIsEnd] = useState(false);
+    const [qntdSlides, setQntdSlides] = useState(4)
+    const [isBeginning, setIsBeginning] = useState(true)
+    const [isEnd, setIsEnd] = useState(false)
     const tecnologias = [
         {
             id: 1,
@@ -74,9 +74,9 @@ const Tecnologias = () => {
 
         handleSize()
 
-        window.addEventListener('resize', handleSize);
+        window.addEventListener('resize', handleSize)
 
-        return () => window.removeEventListener('resize', handleSize);
+        return () => window.removeEventListener('resize', handleSize)
     }, [])
 
     return (
