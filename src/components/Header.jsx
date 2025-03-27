@@ -9,6 +9,26 @@ const Header = () => {
   const [scrollAtual, setScrollAtual] = useState(window.scrollY)
   const [statusHeader, setStatusHeader] = useState('header-visivel')
   const [menuHamburguer, setMenuHamburguer] = useState('')
+  const navContent = [
+    {
+      id: 1,
+      iconeMobile: <LiaHomeSolid className="icone-menu-mobile" />,
+      desc: "Home",
+      path: "/",
+    },
+    {
+      id: 2,
+      iconeMobile: <GrProjects className="icone-menu-mobile" />,
+      desc: "Projetos",
+      path: "projetos",
+    },
+    {
+      id: 3,
+      iconeMobile: <MdOutlineEmail className="icone-menu-mobile" />,
+      desc: "Contato",
+      path: "contato",
+    },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,18 +75,12 @@ const Header = () => {
             <li>
               <span className="text-menu-mobile">MENU</span>
             </li>
-            <li onClick={acaoMenu}>
-              <LiaHomeSolid className="icone-menu-mobile" />
-              <Link to="/" className="nav-item">Home</Link>
-            </li>
-            <li onClick={acaoMenu}>
-              <GrProjects className="icone-menu-mobile" />
-              <Link to="projetos" className="nav-item">Projetos</Link>
-            </li>
-            <li onClick={acaoMenu}>
-              <MdOutlineEmail className="icone-menu-mobile" />
-              <Link to="contato" className="nav-item">Contato</Link>
-            </li>
+            {navContent.map(item => (
+              <li onClick={acaoMenu} key={item.id}>
+                {item.iconeMobile}
+                <Link to={item.path} className="nav-item">{item.desc}</Link>
+              </li>
+            ))}            
           </ul>
         </nav>
       </div>
